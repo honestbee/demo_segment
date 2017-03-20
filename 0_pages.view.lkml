@@ -9,7 +9,7 @@ view: pages {
 
   dimension: event_id {
     type: string
-    sql: CONCAT(${received_raw}, ${uuid}) ;;
+    sql: ${received_raw} ;;
   }
 
   dimension: anonymous_id {
@@ -62,12 +62,6 @@ view: pages {
     type: string
     # hidden: true
     sql: ${TABLE}.user_id ;;
-  }
-
-  dimension: uuid {
-    type: number
-    value_format_name: id
-    sql: ${TABLE}.uuid ;;
   }
 
   measure: count {

@@ -8,12 +8,11 @@ view: mapped_tracks {
     sql: select *
         , datediff(minutes, lag(received_at) over(partition by looker_visitor_id order by received_at), received_at) as idle_time_minutes
         from (
-          select CONCAT(t.received_at, t.uuid) as event_id
+          select t.received_at as event_id
           , t.anonymous_id
           , a2v.looker_visitor_id
           , t.received_at
           , t.event as event
-          , t.uuid
           from segment_honestbee_sg_2_0_production.tracks as t
           inner join ${aliases_mapping.SQL_TABLE_NAME} as a2v
           on a2v.alias = coalesce(t.user_id, t.anonymous_id)
@@ -23,10 +22,6 @@ view: mapped_tracks {
 
   dimension: anonymous_id {
     sql: ${TABLE}.anonymous_id ;;
-  }
-
-  dimension: uuid {
-    sql: ${TABLE}.uuid ;;
   }
 
   dimension: event_id {

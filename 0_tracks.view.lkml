@@ -28,15 +28,9 @@ view: tracks {
     sql: ${TABLE}.user_id ;;
   }
 
-  dimension: uuid {
-    type: number
-    value_format_name: id
-    sql: ${TABLE}.uuid ;;
-  }
-
   dimension: event_id {
     type: string
-    sql: CONCAT(${received_raw}, ${uuid}) ;;
+    sql: ${received_raw} ;;
   }
 
   measure: count {

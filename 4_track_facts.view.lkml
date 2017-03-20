@@ -8,7 +8,6 @@ view: track_facts {
     sql: select t.anonymous_id
           , t.received_at
           , t.event_id
-          , t.uuid
           , t.event
           , s.session_id
           , t.looker_visitor_id
@@ -30,11 +29,6 @@ view: track_facts {
   dimension: event {
     #     hidden: true
     sql: ${TABLE}.event ;;
-  }
-
-  dimension: uuid {
-    hidden: yes
-    sql: ${TABLE}.uuid ;;
   }
 
   dimension: session_id {

@@ -7,7 +7,6 @@ view: event_facts {
     sql: select t.received_at
         , t.anonymous_id
         , t.event_id
-        , t.uuid as uuid
         , t.event_source
         , s.session_id
         , t.looker_visitor_id
@@ -27,11 +26,6 @@ view: event_facts {
     primary_key: yes
     #     hidden: true
     sql: ${TABLE}.event_id ;;
-  }
-
-  dimension: uuid {
-    type: string
-    sql: ${TABLE}.uuid ;;
   }
 
   dimension: session_id {
