@@ -1,5 +1,5 @@
 view: pages {
-  sql_table_name: segment.pages ;;
+  sql_table_name: segment_honestbee_sg_2_0_production.pages ;;
 
   dimension: id {
     primary_key: yes

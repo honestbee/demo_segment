@@ -1,8 +1,9 @@
-connection: "segment_sources"
+connection: "beekeeper"
 
 # include all views in this project
 # - include: "*.dashboard.lookml"  # include all dashboards in this project
 include: "*.view"
+include: "*.dashboard.lookml"  # include all the dashboards
 
 # - explore: pages
 

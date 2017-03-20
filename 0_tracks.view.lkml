@@ -1,5 +1,5 @@
 view: tracks {
-  sql_table_name: segment.tracks ;;
+  sql_table_name: segment_honestbee_sg_2_0_production.tracks ;;
 
   dimension: anonymous_id {
     type: string

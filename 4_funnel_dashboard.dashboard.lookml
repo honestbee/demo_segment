@@ -3,31 +3,31 @@
   layout: tile
   tile_size: 200
 
-  filters:
+#  filters:
 
-  - name: event1
-    title: 'First Event'
-    type: field_filter
-    model: tracks
-    explore: track_facts
-    field: track_facts.event
-    default_value: 'signup'
+  #- name: event1
+  #  title: 'First Event'
+  #  type: field_filter
+  #  model: tracks
+  #  explore: track_facts
+  #  field: track_facts.event
+  #  default_value: 'signup'
 
-  - name: event2
-    title: 'Second Event'
-    type: field_filter
-    model: tracks
-    explore: track_facts
-    field: track_facts.event
-    default_value: 'login'
+  #- name: event2
+  #  title: 'Second Event'
+  #  type: field_filter
+  #  model: tracks
+  #  explore: track_facts
+  #  field: track_facts.event
+  #  default_value: 'login'
 
-  - name: event3
-    title: 'Third Event'
-    type: field_filter
-    model: tracks
-    explore: track_facts
-    field: track_facts.event
-    default_value: 'created_ticket'
+  #- name: event3
+  #  title: 'Third Event'
+  #  type: field_filter
+  #  model: tracks
+  #  explore: track_facts
+  #  field: track_facts.event
+  #  default_value: 'created_ticket'
 
   elements:
 
@@ -38,10 +38,10 @@
     explore: funnel_explorer
     measures: [funnel_explorer.count_sessions_event1,
       funnel_explorer.count_sessions_event12, funnel_explorer.count_sessions_event123]
-    listen:
-      event1: funnel_explorer.event1
-      event2: funnel_explorer.event2
-      event3: funnel_explorer.event3
+    #listen:
+    #  event1: funnel_explorer.event1
+    #  event2: funnel_explorer.event2
+    #  event3: funnel_explorer.event3
     sorts: [funnel_explorer.count_sessions desc]
     limit: '500'
     column_limit: '50'
