@@ -1,5 +1,5 @@
 view: identifies {
-  sql_table_name: segment.identifies ;;
+  sql_table_name: segment_honestbee_sg_2_0_production.identifies ;;
 
   dimension: anonymous_id {
     type: string
